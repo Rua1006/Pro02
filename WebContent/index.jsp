@@ -144,17 +144,17 @@
     <div class="page2">
         <div class="page_top">
             <div class="page2_1">
-                <a href="#">
+                <a href="<%=request.getContextPath()%>/GetProductItemListCtrl?cateNo=1">
                     <img src="./img/main/main2_1.jpg" alt="사료" class="pic2_1">
                     <span class="product-list-name">사료</span>
                 </a>
             </div>
             <div class="page2_2">
-                <a href="#">
+                <a href="<%=request.getContextPath()%>/GetProductItemListCtrl?cateNo=2">
                     <img src="./img/main/main2_2.jpg" alt="화식" class="pic2_2">
                     <span class="product-list-name2">화식</span>
                 </a>
-                <a href="#">
+                <a href="<%=request.getContextPath()%>/GetProductItemListCtrl?cateNo=3">
                     <img src="./img/main/main2_3.jpg" alt="간식" class="pic2_3">
                     <span class="product-list-name2">간식</span> 
                 </a> 

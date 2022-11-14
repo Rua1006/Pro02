@@ -86,7 +86,6 @@
 <body>
 <%
 	Product vo = (Product) request.getAttribute("pro");
-	
 %>
 <div class="wrap">
 <header class="hd">
@@ -148,7 +147,7 @@
 			</tbody>
 		</table>
 		<div class="btn-group">
-			<a href="<%=request.getContextPath() %>/GetProductListCtrl" class="btn btn-dark">목록으로</a>
+			<a href="<%=request.getContextPath() %>/GetProductListCtrl?cateNo=<%=vo.getCateNo() %>" class="btn btn-dark">목록으로</a>
 			<% if(sid.equals("admin")) { %>
 			<a href="<%=request.getContextPath() %>/DeleteProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-danger">제품 삭제</a>
 			<a href="<%=request.getContextPath() %>/UpdateProductCtrl?proNo=<%=vo.getProNo() %>" class="btn btn-secondary">제품 정보 수정</a>
