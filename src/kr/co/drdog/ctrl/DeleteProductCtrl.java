@@ -25,6 +25,7 @@ public class DeleteProductCtrl extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		int proNo = Integer.parseInt(request.getParameter("proNo"));
+		int cateNo = Integer.parseInt(request.getParameter("cateNo"));
 		String sql = "";
 		int cnt = 0;
 		try {
@@ -37,7 +38,7 @@ public class DeleteProductCtrl extends HttpServlet {
 			cnt = pstmt.executeUpdate();
 			
 			if(cnt>=1){
-				response.sendRedirect("GetProductListCtrl");
+				response.sendRedirect("GetProductListCtrl?cateNo="+cateNo);
 			} else {
 				response.sendRedirect("GetProductDetailCtrl?proNo="+proNo);
 			}
